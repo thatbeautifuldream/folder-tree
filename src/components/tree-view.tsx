@@ -268,7 +268,7 @@ export default function TreeViewComponent() {
         </DndProvider>
       )}
 
-      {selectedNode && !selectedNode.droppable && isHeaderOpen && (
+      {/* {selectedNode && !selectedNode.droppable && isHeaderOpen && (
         <div className="p-2 bg-muted/50">
           <h3 className="text-xs font-medium mb-2 text-foreground">
             File Details
@@ -281,7 +281,7 @@ export default function TreeViewComponent() {
             {selectedNode.data?.fileType || "Unknown"}
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

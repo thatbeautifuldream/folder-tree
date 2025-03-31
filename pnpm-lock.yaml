@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@faker-js/faker':
+        specifier: ^9.6.0
+        version: 9.6.0
       '@minoru/react-dnd-treeview':
         specifier: ^3.5.0
         version: 3.5.0(dnd-core@16.0.1)(react-dnd@16.0.1(@types/node@20.17.28)(@types/react@19.0.12)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@tanstack/react-query':
+        specifier: ^5.71.1
+        version: 5.71.1(react@19.1.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -41,6 +47,9 @@ importers:
       tw-animate-css:
         specifier: ^1.2.5
         version: 1.2.5
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -126,6 +135,10 @@ packages:
   '@eslint/plugin-kit@0.2.7':
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@faker-js/faker@9.6.0':
+    resolution: {integrity: sha512-3vm4by+B5lvsFPSyep3ELWmZfE3kicDtmemVpuwl1yH7tqtnHdsA6hG8fbXedMVdkzgtvzWoRgjSB4Q+FHnZiw==}
+    engines: {node: '>=18.0.0', npm: '>=9.0.0'}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -431,6 +444,14 @@ packages:
 
   '@tailwindcss/postcss@4.0.17':
     resolution: {integrity: sha512-qeJbRTB5FMZXmuJF+eePd235EGY6IyJZF0Bh0YM6uMcCI4L9Z7dy+lPuLAhxOJzxnajsbjPoDAKOuAqZRtf1PQ==}
+
+  '@tanstack/query-core@5.71.1':
+    resolution: {integrity: sha512-4+ZswCHOfJX+ikhXNoocamTUmJcHtB+Ljjz/oJkC7/eKB5IrzEwR4vEwZUENiPi+wISucJHR5TUbuuJ26w3kdQ==}
+
+  '@tanstack/react-query@5.71.1':
+    resolution: {integrity: sha512-6BTkaSIGT58MroI4kIGXNdx/NhirXPU+75AJObLq+WBa39WmoxhzSk0YX+hqWJ/bvqZJFxslbEU4qIHaRZq+8Q==}
+    peerDependencies:
+      react: ^18 || ^19
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
@@ -1813,6 +1834,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
@@ -1880,6 +1904,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.12.0
       levn: 0.4.1
+
+  '@faker-js/faker@9.6.0': {}
 
   '@humanfs/core@0.19.1': {}
 
@@ -2114,6 +2140,13 @@ snapshots:
       lightningcss: 1.29.2
       postcss: 8.5.3
       tailwindcss: 4.0.17
+
+  '@tanstack/query-core@5.71.1': {}
+
+  '@tanstack/react-query@5.71.1(react@19.1.0)':
+    dependencies:
+      '@tanstack/query-core': 5.71.1
+      react: 19.1.0
 
   '@tybys/wasm-util@0.9.0':
     dependencies:
@@ -3778,3 +3811,5 @@ snapshots:
   word-wrap@1.2.5: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.2: {}
