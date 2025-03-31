@@ -16,6 +16,7 @@ import {
   FolderOpen,
   File,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface FileData {
   fileType: string;
@@ -115,6 +116,7 @@ const CustomNode: React.FC<{
   const isFolder = node.droppable;
 
   const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (isFolder) {
       onToggle(node.id);
     }
@@ -176,6 +178,11 @@ export default function TreeViewComponent() {
   const [selectedNode, setSelectedNode] = useState<NodeModel | null>(null);
 
   const handleDrop = (newTree: NodeModel[], options: DropOptions) => {
+    console.log(
+      "🪵 [tree-view.tsx:179] ~ token ~ \x1b[0;32moptions\x1b[0m = ",
+      options
+    );
+
     setTreeData(newTree);
   };
 
@@ -248,7 +255,10 @@ export default function TreeViewComponent() {
               dropTargetOffset={5}
               placeholderRender={(node, { depth }) => (
                 <div
-                  className="bg-primary h-[2px]"
+                  className={cn(
+                    "bg-primary h-[2px]",
+                    node.droppable && "bg-muted"
+                  )}
                   style={{ marginLeft: depth * 24 }}
                 />
               )}
